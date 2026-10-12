@@ -27,6 +27,33 @@ Rscript winrate-confidence-interval.R
 
 The script prints a results table to the console, then displays the chart.
 
+## Quick check for a single win rate
+
+For a quick test without a chart, use `winrate-confidence-interval_simple.R`. It relies only on base R, so it needs no extra package.
+
+Edit the two values at the top of the script:
+
+```r
+wins    <- 14
+matches <- 26
+```
+
+`wins` must be an integer between `0` and `matches`, and `matches` an integer `> 0`.
+
+Then run it with **Ctrl+Shift+S** in RStudio, or from the command line:
+
+```sh
+Rscript winrate-confidence-interval_simple.R
+```
+
+It prints a single line with the 95% Clopper-Pearson interval:
+
+```
+Lower bound: 33.4%  |  Win rate: 53.8%  |  Upper bound: 73.4%
+```
+
+To use another confidence level, pass it to the last line, for example `win_rate_ci(wins, matches, level = 0.99)`.
+
 ## Editing the input variables
 
 All inputs are in the `# --- Input values to edit ---` block at the top of the script.
