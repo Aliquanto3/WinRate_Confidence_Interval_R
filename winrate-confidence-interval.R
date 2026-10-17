@@ -8,9 +8,9 @@ library(ggplot2)
 
 # --- Input values to edit ---
 players <- data.frame(
-  name  = c("Mewtwo", "Lugia", "Zapdos", "Entei", "Articuno", "Suicune", "Moltres", "Raikou"),
-  wins  = c(38, 20, 14, 25, 9, 30, 4, 52),
-  games = c(50, 30, 26, 48, 20, 70, 15, 80)
+  name  = c("A", "B", "C", "D"),
+  wins  = c(70, 3, 650, 547),
+  games = c(100, 3, 1000, 853)
 )
 conf_level <- 0.95  # confidence level
 reference  <- 0.5   # comparison threshold (coin flip)

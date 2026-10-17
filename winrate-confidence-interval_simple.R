@@ -1,8 +1,8 @@
 # 95% confidence interval (Clopper-Pearson) of a win rate
 # Edit the two values below, then press Ctrl+Shift+S (Source)
 
-wins    <- 14
-matches <- 26
+wins    <- 547
+matches <- 853
 
 win_rate_ci <- function(wins, matches, level = 0.95) {
   ci <- binom.test(wins, matches, conf.level = level)$conf.int
